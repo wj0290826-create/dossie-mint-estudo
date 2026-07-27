@@ -4,7 +4,7 @@ import { colors, fonts } from '../theme/theme';
 
 const LETTERS = ['A', 'B', 'C', 'D'];
 
-export default function QuizScreen({ questions, onFinish }) {
+export default function QuizScreen({ questions, onFinish, onHome }) {
   const [index, setIndex] = useState(0);
   const [answers, setAnswers] = useState(new Array(questions.length).fill(null));
   const [selected, setSelected] = useState(null);
@@ -31,9 +31,15 @@ export default function QuizScreen({ questions, onFinish }) {
 
   return (
     <ScrollView style={styles.screen} contentContainerStyle={{ paddingBottom: 60 }}>
+      <View style={styles.topBar}>
+        <TouchableOpacity onPress={onHome} style={styles.homeBtn}>
+          <Text style={styles.homeBtnText}>← Início</Text>
+        </TouchableOpacity>
+        <Text style={styles.qProgressTxt}>{index + 1} / {questions.length}</Text>
+      </View>
+
       <View style={styles.quizHead}>
         <Text style={styles.qCode}>Q-{String(q.id).padStart(3, '0')}</Text>
-        <Text style={styles.qProgressTxt}>{index + 1} / {questions.length}</Text>
       </View>
       <View style={styles.progressTrack}>
         <View style={[styles.progressFill, { width: `${progress}%` }]} />
@@ -77,6 +83,9 @@ export default function QuizScreen({ questions, onFinish }) {
 
 const styles = StyleSheet.create({
   screen: { flex: 1, backgroundColor: colors.ink, padding: 20 },
+  topBar: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 14 },
+  homeBtn: { paddingVertical: 4, paddingHorizontal: 2 },
+  homeBtnText: { color: colors.gold, fontSize: 13, fontWeight: '600' },
   quizHead: { flexDirection: 'row', justifyContent: 'space-between', marginBottom: 10 },
   qCode: { fontFamily: fonts.mono, fontSize: 12, color: colors.gold },
   qProgressTxt: { fontFamily: fonts.mono, fontSize: 12, color: colors.textFaint },
