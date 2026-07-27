@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { SafeAreaView, StatusBar, StyleSheet } from 'react-native';
+import { SafeAreaView, StatusBar, StyleSheet, Alert, BackHandler, Platform } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import { QUESTIONS } from './src/data/questions';
@@ -79,6 +79,36 @@ export default function App() {
     setScreen('home');
   }
 
+  function requestGoHomeFromQuiz() {
+    Alert.alert(
+      'Voltar ao início?',
+      'Vais perder o progresso deste exame.',
+      [
+        { text: 'Cancelar', style: 'cancel' },
+        { text: 'Voltar ao início', style: 'destructive', onPress: goHome },
+      ]
+    );
+  }
+
+  function requestExitApp() {
+    Alert.alert(
+      'Sair da aplicação?',
+      'Isto vai fechar o Dossiê MININT.',
+      [
+        { text: 'Cancelar', style: 'cancel' },
+        {
+          text: 'Sair',
+          style: 'destructive',
+          onPress: () => {
+            if (Platform.OS === 'android') {
+              BackHandler.exitApp();
+            }
+          },
+        },
+      ]
+    );
+  }
+
   return (
     <SafeAreaView style={styles.safe}>
       <StatusBar barStyle="light-content" backgroundColor={colors.ink} />
@@ -90,10 +120,11 @@ export default function App() {
           onStartFull={() => startExam('full')}
           onStartShort={() => startExam('short')}
           onStartCategory={(cat) => startExam('category', cat)}
+          onExit={requestExitApp}
         />
       )}
       {screen === 'quiz' && (
-        <QuizScreen questions={examQuestions} onFinish={finishExam} />
+        <QuizScreen questions={examQuestions} onFinish={finishExam} onHome={requestGoHomeFromQuiz} />
       )}
       {screen === 'results' && (
         <ResultsScreen questions={examQuestions} answers={examAnswers} onHome={goHome} />
