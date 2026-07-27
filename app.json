@@ -1,0 +1,26 @@
+{
+  "expo": {
+    "name": "Dossiê MININT",
+    "slug": "dossie-mint-estudo",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#0D1720",
+    "splash": {
+      "backgroundColor": "#0D1720"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "package": "ao.tresletras.dossiemint",
+      "adaptiveIcon": {
+        "backgroundColor": "#0D1720"
+      }
+    },
+    "web": {
+      "bundler": "metro"
+    }
+  }
+}
