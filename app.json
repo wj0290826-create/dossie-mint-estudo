@@ -21,6 +21,14 @@
     },
     "web": {
       "bundler": "metro"
-    }
+    },
+    "plugins": [
+      [
+        "react-native-google-mobile-ads",
+        {
+          "androidAppId": "ca-app-pub-4467431537331573~3904551568"
+        }
+      ]
+    ]
   }
 }
