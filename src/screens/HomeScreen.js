@@ -1,10 +1,10 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, ScrollView, StyleSheet } from 'react-native';
+import { View, Text, TouchableOpacity, ScrollView, StyleSheet, Platform } from 'react-native';
 import { colors, fonts } from '../theme/theme';
 
-export default function HomeScreen({ categories, totalQuestions, bestScore, onStartFull, onStartShort, onStartCategory }) {
+export default function HomeScreen({ categories, totalQuestions, bestScore, onStartFull, onStartShort, onStartCategory, onExit }) {
   return (
-    <ScrollView style={styles.screen} contentContainerStyle={{ paddingBottom: 60 }}>
+    <ScrollView style={styles.screen} contentContainerStyle={{ paddingBottom: 40 }}>
       <View style={styles.cover}>
         <View style={styles.coverBar} />
         <View style={styles.eyebrow}>
@@ -56,6 +56,19 @@ export default function HomeScreen({ categories, totalQuestions, bestScore, onSt
           </TouchableOpacity>
         ))}
       </View>
+
+      {Platform.OS === 'android' && (
+        <View style={[styles.btnRow, { marginTop: 22 }]}>
+          <TouchableOpacity style={styles.exitBtn} onPress={onExit}>
+            <Text style={styles.exitBtnText}>Sair da aplicação</Text>
+          </TouchableOpacity>
+        </View>
+      )}
+
+      <View style={styles.footer}>
+        <Text style={styles.footerBrand}>PRODUÇÃO 3LETRAS</Text>
+        <Text style={styles.footerCredits}>Moisés Zombo · Santo da Costa</Text>
+      </View>
     </ScrollView>
   );
 }
@@ -101,4 +114,9 @@ const styles = StyleSheet.create({
   catName: { flex: 1, fontSize: 14, fontWeight: '500', color: colors.text },
   catCount: { fontFamily: fonts.mono, fontSize: 11.5, color: colors.textFaint, marginRight: 6 },
   catArrow: { color: colors.textFaint, fontSize: 14 },
+  exitBtn: { borderWidth: 1, borderColor: colors.bad, borderRadius: 4, paddingVertical: 12, alignItems: 'center' },
+  exitBtnText: { color: colors.bad, fontWeight: '600', fontSize: 13.5 },
+  footer: { alignItems: 'center', marginTop: 30, paddingTop: 16, borderTopWidth: 1, borderTopColor: colors.line },
+  footerBrand: { fontFamily: fonts.mono, fontSize: 10.5, letterSpacing: 1.5, color: colors.goldDim, marginBottom: 4 },
+  footerCredits: { fontSize: 11, color: colors.textFaint },
 });
