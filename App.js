@@ -1,7 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { SafeAreaView, StatusBar, StyleSheet, Alert, BackHandler, Platform } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import mobileAds from 'react-native-google-mobile-ads';
 
 import { QUESTIONS } from './src/data/questions';
 import { colors } from './src/theme/theme';
@@ -10,8 +9,6 @@ import QuizScreen from './src/screens/QuizScreen';
 import ResultsScreen from './src/screens/ResultsScreen';
 
 const BEST_SCORE_KEY = 'mint-best-score';
-
-mobileAds().initialize();
 
 function shuffle(arr) {
   const a = arr.slice();
