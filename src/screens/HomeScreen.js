@@ -1,6 +1,9 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, ScrollView, StyleSheet, Platform } from 'react-native';
+import { BannerAd, BannerAdSize, TestIds } from 'react-native-google-mobile-ads';
 import { colors, fonts } from '../theme/theme';
+
+const adUnitId = __DEV__ ? TestIds.BANNER : 'ca-app-pub-4467431537331573/7770956022';
 
 export default function HomeScreen({ categories, totalQuestions, bestScore, onStartFull, onStartShort, onStartCategory, onExit }) {
   return (
@@ -65,6 +68,13 @@ export default function HomeScreen({ categories, totalQuestions, bestScore, onSt
         </View>
       )}
 
+      <View style={styles.adNotice}>
+        <Text style={styles.adNoticeText}>Ativa os dados móveis para veres o anúncio que ajuda a manter esta app gratuita.</Text>
+      </View>
+      <View style={{ alignItems: 'center', marginTop: 10 }}>
+        <BannerAd unitId={adUnitId} size={BannerAdSize.BANNER} />
+      </View>
+
       <View style={styles.footer}>
         <Text style={styles.footerBrand}>PRODUÇÃO 3LETRAS</Text>
         <Text style={styles.footerCredits}>Moisés Zombo · Santo da Costa</Text>
@@ -116,7 +126,9 @@ const styles = StyleSheet.create({
   catArrow: { color: colors.textFaint, fontSize: 14 },
   exitBtn: { borderWidth: 1, borderColor: colors.bad, borderRadius: 4, paddingVertical: 12, alignItems: 'center' },
   exitBtnText: { color: colors.bad, fontWeight: '600', fontSize: 13.5 },
-  footer: { alignItems: 'center', marginTop: 30, paddingTop: 16, borderTopWidth: 1, borderTopColor: colors.line },
+  adNotice: { marginTop: 20, paddingHorizontal: 4 },
+  adNoticeText: { fontSize: 11, color: colors.textFaint, textAlign: 'center' },
+  footer: { alignItems: 'center', marginTop: 20, paddingTop: 16, borderTopWidth: 1, borderTopColor: colors.line },
   footerBrand: { fontFamily: fonts.mono, fontSize: 10.5, letterSpacing: 1.5, color: colors.goldDim, marginBottom: 4 },
   footerCredits: { fontSize: 11, color: colors.textFaint },
 });
