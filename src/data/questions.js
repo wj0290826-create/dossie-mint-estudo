@@ -1,6 +1,7 @@
 // Banco de 300 perguntas para preparação ao concurso do MININT
 export const QUESTIONS = [
-];
+{"id": 142, "category": "Cultura Geral e Actualidades", "question": "O desporto mais popular em Angola é:", "options": ["Futebol", "Basebol", "Hóquei no gelo", "Râguebi"], "correct": 0},
+{"id": 143, "category": "Língua Portuguesa", "question": "As palavras 'cela' e 'sela' são exemplo de:", "options": ["Palavras antónimas", "Palavras homófonas", "Palavras compostas", "Palavras sinónimas"], "correct": 1},
 {"id": 1, "category": "História de Angola", "question": "A abertura ao multipartidarismo em Angola ocorreu, formalmente, no início da década de:", "options": ["1960", "1990", "1970", "2000"], "correct": 1},
 {"id": 2, "category": "Cultura Geral e Actualidades", "question": "A moeda angolana (Kwanza) é emitida pelo:", "options": ["Banco Mundial", "Fundo Monetário Internacional", "Banco Central Europeu", "Banco Nacional de Angola"], "correct": 3},
 {"id": 3, "category": "MININT e Polícia Nacional", "question": "A formação de novos agentes da Polícia Nacional ocorre normalmente em:", "options": ["Academias e centros de formação próprios", "Sem qualquer formação", "Escolas primárias", "Faculdades de Medicina"], "correct": 0},
@@ -75,7 +76,7 @@ export const QUESTIONS = [
 {"id": 72, "category": "MININT e Polícia Nacional", "question": "A disciplina na Polícia Nacional rege-se por um:", "options": ["Acordo informal entre colegas", "Nenhuma regra escrita", "Costume sem base legal", "Regulamento Disciplinar próprio"], "correct": 3},
 {"id": 73, "category": "MININT e Polícia Nacional", "question": "A colaboração entre a Polícia Nacional e o Ministério Público visa principalmente:", "options": ["Eliminar o direito de defesa", "Substituir o papel dos juízes", "Aumentar impostos", "A eficácia da investigação e da acção penal"], "correct": 3},
 {"id": 74, "category": "Raciocínio Lógico e Matemática", "question": "Se 5 trabalhadores concluem uma tarefa em 12 dias, quantos dias levariam 10 trabalhadores ao mesmo ritmo?", "options": ["10", "6", "4", "8"], "correct": 1},
-{"id": 75, "category": "MININT e Polícia Nacional", "question": "A Polícia Nacional rege-se, entre outros diplomas, pela sua Lei Orgânica e:", "options": ["Decisões da imprensa", "Regulamentos internos aprovados nos termos da lei", "Ordens verbais de superiores, apenas", "Costumes locais sem base escrita"], "correct": 1}
+{"id": 75, "category": "MININT e Polícia Nacional", "question": "A Polícia Nacional rege-se, entre outros diplomas, pela sua Lei Orgânica e:", "options": ["Decisões da imprensa", "Regulamentos internos aprovados nos termos da lei", "Ordens verbais de superiores, apenas", "Costumes locais sem base escrita"], "correct": 1},
 {"id": 76, "category": "MININT e Polícia Nacional", "question": "A actuação policial em investigação criminal deve respeitar as garantias processuais do:", "options": ["Suspeito ou arguido", "Apenas da vítima", "Apenas da imprensa", "Nenhuma das partes"], "correct": 0},
 {"id": 77, "category": "Direito Constitucional", "question": "Quantos poderes clássicos costumam ser reconhecidos na organização do poder político?", "options": ["Três", "Quatro", "Dois", "Cinco"], "correct": 0},
 {"id": 78, "category": "Cultura Geral e Actualidades", "question": "Angola é membro da organização mundial:", "options": ["NATO", "G7", "União Europeia", "Organização das Nações Unidas (ONU)"], "correct": 3},
@@ -142,15 +143,13 @@ export const QUESTIONS = [
 {"id": 139, "category": "Direito Penal e Processual Penal", "question": "A legítima defesa é uma causa de:", "options": ["Nulidade do processo", "Exclusão da ilicitude", "Agravamento da pena", "Prescrição do crime"], "correct": 1},
 {"id": 140, "category": "Direito Penal e Processual Penal", "question": "A cumplicidade em Direito Penal refere-se a:", "options": ["Auxílio material ou moral à prática do crime por outrem", "Autoria directa e exclusiva", "Ausência de qualquer participação", "Testemunho no julgamento"], "correct": 0},
 {"id": 141, "category": "MININT e Polícia Nacional", "question": "MININT é a sigla de:", "options": ["Ministério Internacional", "Ministério do Interior", "Ministério da Integração", "Ministério da Indústria"], "correct": 1},
-{"id": 142, "category": "Cultura Geral e Actualidades", "question": "O desporto mais popular em Angola é:", "options": ["Futebol", "Basebol", "Hóquei no gelo", "Râguebi"], "correct": 0},
-{"id": 143, "category": "Língua Portuguesa", "question": "As palavras 'cela' e 'sela' são exemplo de:", "options": ["Palavras antónimas", "Palavras homófonas", "Palavras compostas", "Palavras sinónimas"], "correct": 1},
 {"id": 144, "category": "Língua Portuguesa", "question": "Assinale a frase com concordância verbal correcta:", "options": ["A maioria compareceram.", "Candidatos compareceu.", "Os candidato compareceram.", "A maioria dos candidatos compareceu ao exame."], "correct": 3},
 {"id": 145, "category": "Direito Constitucional", "question": "Quantas vezes pode ser reeleito o Presidente da República, segundo a Constituição?", "options": ["Ilimitadas", "Uma vez", "Nenhuma", "Duas vezes"], "correct": 1},
 {"id": 146, "category": "Raciocínio Lógico e Matemática", "question": "Se 10 objectos custam 150 kwanzas, quanto custam 4 objectos (mesma proporção)?", "options": ["60", "70", "50", "76"], "correct": 0},
 {"id": 147, "category": "Raciocínio Lógico e Matemática", "question": "A soma de dois números é 48. Um deles é 18. Qual é o outro?", "options": ["30", "28", "32", "26"], "correct": 0},
 {"id": 148, "category": "Direito Penal e Processual Penal", "question": "O Ministério Público, no processo penal, tem a função de:", "options": ["Substituir o juiz", "Defender sempre o arguido", "Ser parte neutra sem funções", "Promover a acção penal em nome do Estado"], "correct": 3},
 {"id": 149, "category": "Raciocínio Lógico e Matemática", "question": "Se 6 objectos custam 72 kwanzas, quanto custam 4 objectos (mesma proporção)?", "options": ["48", "54", "56", "42"], "correct": 0},
-{"id": 150, "category": "Direito Constitucional", "question": "O órgão legislativo de Angola designa-se:", "options": ["Senado", "Parlamento Popular", "Congresso", "Assembleia Nacional"], "correct": 3}
+{"id": 150, "category": "Direito Constitucional", "question": "O órgão legislativo de Angola designa-se:", "options": ["Senado", "Parlamento Popular", "Congresso", "Assembleia Nacional"], "correct": 3},
 {"id": 151, "category": "História de Angola", "question": "A cidade de Luanda foi fundada, no período colonial, no século:", "options": ["XIV", "XVI", "XX", "XIX"], "correct": 1},
 {"id": 152, "category": "Língua Portuguesa", "question": "Assinale o conectivo que introduz uma ideia de oposição:", "options": ["Portanto", "E", "Porque", "Contudo"], "correct": 3},
 {"id": 153, "category": "História de Angola", "question": "O Acordo de Bicesse, relativo a Angola, foi assinado em:", "options": ["1985", "1991", "1975", "2002"], "correct": 1},
@@ -225,7 +224,7 @@ export const QUESTIONS = [
 {"id": 222, "category": "Direito Constitucional", "question": "O princípio segundo o qual ninguém pode ser punido sem lei prévia chama-se:", "options": ["Contraditório", "Ampla defesa", "Legalidade penal", "Presunção de inocência"], "correct": 2},
 {"id": 223, "category": "Língua Portuguesa", "question": "Assinale o plural correcto de 'o cônsul':", "options": ["Os cônsules", "Os cônsus", "Os cônsuis", "Os cônsulos"], "correct": 0},
 {"id": 224, "category": "Direito Penal e Processual Penal", "question": "Qual destes é considerado um crime contra a vida?", "options": ["Furto", "Burla", "Difamação", "Homicídio"], "correct": 3},
-{"id": 225, "category": "Raciocínio Lógico e Matemática", "question": "Se 'todo o A é B' e 'todo o B é C', pode concluir-se que:", "options": ["Todo o C é A", "Nenhum A é C", "Todo o A é C", "Nada se pode concluir"], "correct": 2}
+{"id": 225, "category": "Raciocínio Lógico e Matemática", "question": "Se 'todo o A é B' e 'todo o B é C', pode concluir-se que:", "options": ["Todo o C é A", "Nenhum A é C", "Todo o A é C", "Nada se pode concluir"], "correct": 2},
 {"id": 226, "category": "Língua Portuguesa", "question": "Segundo o Acordo Ortográfico, a palavra 'ideia' escreve-se:", "options": ["Com hífen", "Com til", "Sem acento", "Com acento no 'e' (idéia)"], "correct": 2},
 {"id": 227, "category": "História de Angola", "question": "O Reino do Ndongo era governado por soberanos com o título de:", "options": ["Ngola", "Faraó", "Sultão", "Imperador"], "correct": 0},
 {"id": 228, "category": "Direito Penal e Processual Penal", "question": "A instrução criminal, quando existe, serve para:", "options": ["Substituir o julgamento", "Determinar a pena final", "Ser a última fase do processo", "Comprovar judicialmente a decisão de acusar ou não pronunciar"], "correct": 3},
@@ -301,3 +300,4 @@ export const QUESTIONS = [
 {"id": 298, "category": "Raciocínio Lógico e Matemática", "question": "Quanto é 50% de 60?", "options": ["33", "60", "30", "26"], "correct": 2},
 {"id": 299, "category": "História de Angola", "question": "A antiga designação colonial de Angola, enquanto território português, era:", "options": ["República Popular de Angola", "Angola Portuguesa / Província Ultramarina de Angola", "Estado Livre de Angola", "Reino de Angola"], "correct": 1},
 {"id": 300, "category": "Língua Portuguesa", "question": "Quanto ao número, a palavra 'mel' é geralmente usada:", "options": ["Sempre no plural obrigatório", "No singular, por ser pouco usada no plural", "Como 'melos'", "Como 'melas'"], "correct": 1}
+];
