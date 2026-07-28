@@ -1,7 +1,8 @@
 {
   "expo": {
     "name": "Dossiê MININT",
-    "slug": "dossie-mint-estudo",
+    "slug": "dossie-de-estudo-mint",
+    "owner": "moises1-3letras",
     "version": "1.0.0",
     "orientation": "portrait",
     "userInterfaceStyle": "dark",
@@ -29,6 +30,11 @@
           "androidAppId": "ca-app-pub-4467431537331573~3904551568"
         }
       ]
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "5d298bed-92dd-4de9-9743-c86315eab5d4"
+      }
+    }
   }
 }
