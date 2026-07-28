@@ -7,8 +7,11 @@
     "orientation": "portrait",
     "userInterfaceStyle": "dark",
     "backgroundColor": "#0D1720",
+    "icon": "./assets/icon.png",
     "splash": {
-      "backgroundColor": "#0D1720"
+      "image": "./assets/splash-icon.png",
+      "backgroundColor": "#0D1720",
+      "resizeMode": "contain"
     },
     "assetBundlePatterns": ["**/*"],
     "ios": {
@@ -17,20 +20,13 @@
     "android": {
       "package": "ao.tresletras.dossiemint",
       "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#0D1720"
       }
     },
     "web": {
       "bundler": "metro"
     },
-    "plugins": [
-      [
-        "react-native-google-mobile-ads",
-        {
-          "androidAppId": "ca-app-pub-4467431537331573~3904551568"
-        }
-      ]
-    ],
     "extra": {
       "eas": {
         "projectId": "5d298bed-92dd-4de9-9743-c86315eab5d4"
