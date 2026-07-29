@@ -3,7 +3,7 @@ import { View, Text, TouchableOpacity, ScrollView, StyleSheet, Platform } from '
 import { BannerAd, BannerAdSize, TestIds } from 'react-native-google-mobile-ads';
 import { colors, fonts } from '../theme/theme';
 
-const adUnitId = __DEV__ ? TestIds.BANNER : 'ca-app-pub-4467431537331573/7770956022';
+const adUnitId = TestIds.BANNER; // TESTE: força anúncio de teste, mesmo em produção
 
 export default function HomeScreen({ categories, totalQuestions, bestScore, onStartFull, onStartShort, onStartCategory, onExit }) {
   return (
